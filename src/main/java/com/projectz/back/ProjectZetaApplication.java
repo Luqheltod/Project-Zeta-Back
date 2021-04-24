@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ProjectZetaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProjectZetaApplication.class, args);
+		SpringApplicationa.run(ProjectZetaApplication.class, args);
 	}
 
 }
