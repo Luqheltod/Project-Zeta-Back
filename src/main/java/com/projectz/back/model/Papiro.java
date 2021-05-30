@@ -7,9 +7,9 @@ public class Papiro {
 	
 	private String texto;
 	
-	private Integer idOpciones;
+	private Integer idopciones;
 	
-	private Integer idMapa;
+	private Integer idmapa;
 
 	public Integer getId() {
 		return id;
@@ -27,20 +27,20 @@ public class Papiro {
 		this.texto = texto;
 	}
 
-	public Integer getIdOpciones() {
-		return idOpciones;
+	public Integer getIdopciones() {
+		return idopciones;
 	}
 
-	public void setIdOpciones(Integer idOpciones) {
-		this.idOpciones = idOpciones;
+	public void setIdopciones(Integer idOpciones) {
+		this.idopciones = idOpciones;
 	}
 
-	public Integer getIdMapa() {
-		return idMapa;
+	public Integer getIdmapa() {
+		return idmapa;
 	}
 
-	public void setIdMapa(Integer idMapa) {
-		this.idMapa = idMapa;
+	public void setIdmapa(Integer idMapa) {
+		this.idmapa = idMapa;
 	}
 
 	
