@@ -1,5 +1,9 @@
 package com.projectz.back.service;
 
-public class PapiroService {
+import com.projectz.back.model.Papiro;
 
+public interface PapiroService {
+
+	
+	public Papiro findPapiro(Integer id);
 }
