@@ -1,8 +1,11 @@
 package com.projectz.back.model;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(Include.NON_NULL)
@@ -16,6 +19,8 @@ public class Stage {
 	private String mapName;
 	
 	private String flat;
+	
+	private List<Options> options;
 	
 	
 	public Stage() {
@@ -69,6 +74,16 @@ public class Stage {
 
 	public void setFlat(String flat) {
 		this.flat = flat;
+	}
+
+
+	public List<Options> getOptions() {
+		return options;
+	}
+
+
+	public void setOptions(List<Options> options) {
+		this.options = options;
 	}
 	
 	

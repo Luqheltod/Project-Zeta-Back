@@ -10,6 +10,8 @@ import com.projectz.back.model.Options;
 @Mapper
 public interface OptionsMapper {
 
-	@Select("SELECT * FROM pz.maintexto WHERE id =#{id}")
-	public Options getOptionsById(@Param("id")Integer id);
+	@Select({
+		"SELECT * FROM pz.options o WHERE o.id_options = #{idStage} "
+	})
+	public Options getOptionsFromStageId(@Param("idStage")Long idStage);
 }
