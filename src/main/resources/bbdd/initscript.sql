@@ -9,3 +9,13 @@ CREATE TABLE pz.stage (
 
 COMMENT ON COLUMN pz.stage.flat IS 'piso actual';
 COMMENT ON COLUMN pz.stage.map_name IS 'nombre del archivo de mapa';
+
+
+CREATE TABLE pz."options" (
+	id_options bigserial NOT NULL,
+	id_stage int8 NULL,
+	text_option varchar NULL,
+	lifedrain int8 NULL,
+	energydrain int8 NULL,
+	instadeath boolean NULL DEFAULT false
+);
