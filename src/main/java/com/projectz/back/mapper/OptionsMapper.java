@@ -1,5 +1,7 @@
 package com.projectz.back.mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -11,7 +13,7 @@ import com.projectz.back.model.Options;
 public interface OptionsMapper {
 
 	@Select({
-		"SELECT * FROM pz.options o WHERE o.id_options = #{idStage} "
+		"SELECT * FROM pz.options o WHERE o.id_stage = #{idStage} "
 	})
-	public Options getOptionsFromStageId(@Param("idStage")Long idStage);
+	public List<Options> getOptionsFromStageId(@Param("idStage")Long idStage);
 }

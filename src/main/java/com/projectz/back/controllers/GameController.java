@@ -22,6 +22,7 @@ public class GameController {
 	@GetMapping("/stage/{idStage}")
 	public ResponseEntity<Stage> getStageInfo(@PathVariable Long idStage) {
 
+		Stage jiji = this.gameService.getStageInfoById(idStage);
 		try {
 		return new ResponseEntity<Stage>(this.gameService.getStageInfoById(idStage), HttpStatus.OK);
 		} catch (Exception e) {
