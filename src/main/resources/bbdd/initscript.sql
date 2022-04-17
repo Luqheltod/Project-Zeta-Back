@@ -19,3 +19,11 @@ CREATE TABLE pz."options" (
 	energydrain int8 NULL,
 	instadeath boolean NULL DEFAULT false
 );
+
+CREATE TABLE pz.games (
+	id_games bigserial NOT NULL,
+	id_stage int8 NULL,
+	life int8 NULL,
+	energy int8 NULL,
+	game_code varchar NULL
+);
