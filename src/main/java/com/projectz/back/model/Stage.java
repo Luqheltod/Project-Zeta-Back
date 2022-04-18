@@ -22,6 +22,7 @@ public class Stage {
 	
 	private List<Options> options;
 	
+	private Boolean finalStage;
 	
 	public Stage() {
 		
@@ -84,6 +85,16 @@ public class Stage {
 
 	public void setOptions(List<Options> options) {
 		this.options = options;
+	}
+
+
+	public Boolean getFinalStage() {
+		return finalStage;
+	}
+
+
+	public void setFinalStage(Boolean finalStage) {
+		this.finalStage = finalStage;
 	}
 	
 	

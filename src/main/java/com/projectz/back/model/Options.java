@@ -20,6 +20,8 @@ public class Options {
 		
 	private Boolean instadeath;
 	
+	private Long toStage;
+	
 	public Options() {
 		
 		
@@ -82,6 +84,14 @@ public class Options {
 
 	public void setInstadeath(Boolean instadeath) {
 		this.instadeath = instadeath;
+	}
+
+	public Long getToStage() {
+		return toStage;
+	}
+
+	public void setToStage(Long toStage) {
+		this.toStage = toStage;
 	}
 
 	

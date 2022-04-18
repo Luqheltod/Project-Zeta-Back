@@ -27,3 +27,10 @@ CREATE TABLE pz.games (
 	energy int8 NULL,
 	game_code varchar NULL
 );
+
+
+ALTER TABLE pz."options" ADD to_stage int8 NULL;
+COMMENT ON COLUMN pz."options".to_stage IS 'la stage a la que dirige esta opcion';
+
+
+ALTER TABLE pz.stage ADD final_stage boolean NULL DEFAULT false;
