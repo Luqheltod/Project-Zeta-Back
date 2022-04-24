@@ -24,6 +24,8 @@ public class Stage {
 	
 	private Boolean finalStage;
 	
+	private Long restModifier;
+	
 	public Stage() {
 		
 	}
@@ -95,6 +97,16 @@ public class Stage {
 
 	public void setFinalStage(Boolean finalStage) {
 		this.finalStage = finalStage;
+	}
+
+
+	public Long getRestModifier() {
+		return restModifier;
+	}
+
+
+	public void setRestModifier(Long restModifier) {
+		this.restModifier = restModifier;
 	}
 	
 	
