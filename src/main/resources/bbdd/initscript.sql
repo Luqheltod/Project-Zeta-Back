@@ -29,6 +29,14 @@ CREATE TABLE pz.games (
 );
 
 
+CREATE TABLE pz.rest_info (
+	id_rest_info bigserial NOT NULL,
+	message varchar NULL,
+	energy_difference int8 NULL,
+	life_difference int8 NULL
+);
+
+
 ALTER TABLE pz."options" ADD to_stage int8 NULL;
 COMMENT ON COLUMN pz."options".to_stage IS 'la stage a la que dirige esta opcion';
 

@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 public class RestDto {
 
 	
-	private Long idRest;
+	private Long idRestInfo;
 	
 	private String message;
 	
@@ -21,20 +21,20 @@ public class RestDto {
 		
 	}
 
-	public RestDto(Long idRest, String message, Long energyDifference, Long lifeDifference) {
+	public RestDto(Long idRestInfo, String message, Long energyDifference, Long lifeDifference) {
 		super();
-		this.idRest = idRest;
+		this.idRestInfo = idRestInfo;
 		this.message = message;
 		this.energyDifference = energyDifference;
 		this.lifeDifference = lifeDifference;
 	}
 
-	public Long getIdRest() {
-		return idRest;
+	public Long getIdRestInfo() {
+		return idRestInfo;
 	}
 
-	public void setIdRest(Long idRest) {
-		this.idRest = idRest;
+	public void setIdRestInfo(Long idRestInfo) {
+		this.idRestInfo = idRestInfo;
 	}
 
 	public String getMessage() {

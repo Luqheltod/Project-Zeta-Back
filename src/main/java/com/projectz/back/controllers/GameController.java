@@ -8,9 +8,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
+import com.projectz.back.model.RestDto;
 import com.projectz.back.model.Stage;
 import com.projectz.back.service.GameService;
+import com.projectz.back.service.RestService;
 
 @RestController
 @RequestMapping("/projectz")
@@ -18,17 +19,35 @@ public class GameController {
 
 	 @Autowired
 	 GameService gameService;
+	 
+	 @Autowired
+	 RestService restService;
 	
 	@GetMapping("/stage/{idStage}")
 	public ResponseEntity<Stage> getStageInfo(@PathVariable Long idStage) {
 
-		Stage jiji = this.gameService.getStageInfoById(idStage);
+		
 		try {
 		return new ResponseEntity<Stage>(this.gameService.getStageInfoById(idStage), HttpStatus.OK);
 		} catch (Exception e) {
 			
 			return new ResponseEntity<Stage>(HttpStatus.INTERNAL_SERVER_ERROR);
 		} 
+}
+	
+	@GetMapping("/rest/{restModifier}")
+	public ResponseEntity<RestDto> getRestInfo(@PathVariable Long restModifier) {
+
+		
+		try {
+		RestDto restInfo =	this.restService.getRestInfo(restModifier);
+		
+		return new ResponseEntity<RestDto>(restInfo, HttpStatus.OK);
+		} catch (Exception e) {
+			
+			return new ResponseEntity<RestDto>(HttpStatus.INTERNAL_SERVER_ERROR);
+		} 
+	
 }
 	
 }
