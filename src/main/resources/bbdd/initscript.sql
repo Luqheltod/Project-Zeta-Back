@@ -36,6 +36,12 @@ CREATE TABLE pz.rest_info (
 	life_difference int8 NULL
 );
 
+CREATE TABLE pz.instadeath (
+	id_instadeath bigserial NOT NULL,
+	message varchar NULL,
+	id_options int8 NULL
+);
+
 
 ALTER TABLE pz."options" ADD to_stage int8 NULL;
 COMMENT ON COLUMN pz."options".to_stage IS 'la stage a la que dirige esta opcion';
