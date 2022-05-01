@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.projectz.back.model.InstadeathDto;
 import com.projectz.back.model.RestDto;
 import com.projectz.back.model.Stage;
 import com.projectz.back.service.GameService;
@@ -50,4 +51,19 @@ public class GameController {
 	
 }
 	
+	
+	@GetMapping("/instadeath/{idOption}")
+	public ResponseEntity<InstadeathDto> getInstadeathInfo(@PathVariable Long idOption) {
+
+		
+		try {
+		InstadeathDto instadeathInfo =	this.gameService.getInstadeathInfo(idOption);
+		
+		return new ResponseEntity<InstadeathDto>(instadeathInfo, HttpStatus.OK);
+		} catch (Exception e) {
+			
+			return new ResponseEntity<InstadeathDto>(HttpStatus.INTERNAL_SERVER_ERROR);
+		} 
+	
+}
 }
