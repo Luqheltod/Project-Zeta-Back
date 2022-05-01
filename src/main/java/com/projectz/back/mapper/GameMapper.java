@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 
+import com.projectz.back.model.InstadeathDto;
 import com.projectz.back.model.Stage;
 
 
@@ -23,4 +24,8 @@ public interface GameMapper {
 		
 	})
 	public Stage getStageInfoById(@Param("idStage")Long id);
+
+	@Select({
+	"SELECT * FROM pz.instadeath i WHERE id_options =#{idOption}"})
+	public InstadeathDto getInstadeathInfo(@Param("idOption")Long idOption);
 }

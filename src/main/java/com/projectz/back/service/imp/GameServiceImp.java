@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.projectz.back.mapper.GameMapper;
+import com.projectz.back.model.InstadeathDto;
 import com.projectz.back.model.Stage;
 import com.projectz.back.service.GameService;
 
@@ -17,6 +18,11 @@ public class GameServiceImp implements GameService{
 	public Stage getStageInfoById(Long idStage) {
 
 		return this.gameMapper.getStageInfoById(idStage);
+	}
+
+	@Override
+	public InstadeathDto getInstadeathInfo(Long idOption) {
+		 return this.gameMapper.getInstadeathInfo(idOption);
 	}
 
 	
