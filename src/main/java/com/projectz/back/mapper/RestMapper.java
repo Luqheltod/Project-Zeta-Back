@@ -11,7 +11,7 @@ import com.projectz.back.model.RestDto;
 public interface RestMapper {
 	
 	@Select({
-		"SELECT * FROM pz.rest_info ri WHERE ri.id_rest_info = #{idRest} "
+		"SELECT * FROM pzz.rest_info ri WHERE ri.id_rest_info = #{idRest} "
 	})
 	public RestDto getRestInfoByIdRest(@Param("idRest")Long idRest);
 

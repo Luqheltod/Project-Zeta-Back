@@ -17,7 +17,7 @@ public interface GameMapper {
 
 	
 	@Select({
-	"SELECT * FROM pz.stage WHERE id_stage =#{idStage}"})
+	"SELECT * FROM pzz.stage WHERE id_stage =#{idStage}"})
 	@Results(value = {
 			
 			@Result(property = "options", column = "id_stage", many = @Many(select = "com.projectz.back.mapper.OptionsMapper.getOptionsFromStageId"))
@@ -26,6 +26,6 @@ public interface GameMapper {
 	public Stage getStageInfoById(@Param("idStage")Long id);
 
 	@Select({
-	"SELECT * FROM pz.instadeath i WHERE id_options =#{idOption}"})
+	"SELECT * FROM pzz.instadeath i WHERE id_options =#{idOption}"})
 	public InstadeathDto getInstadeathInfo(@Param("idOption")Long idOption);
 }

@@ -13,7 +13,7 @@ import com.projectz.back.model.Options;
 public interface OptionsMapper {
 
 	@Select({
-		"SELECT * FROM pz.options o WHERE o.id_stage = #{idStage} "
+		"SELECT * FROM pzz.options o WHERE o.id_stage = #{idStage} "
 	})
 	public List<Options> getOptionsFromStageId(@Param("idStage")Long idStage);
 }
