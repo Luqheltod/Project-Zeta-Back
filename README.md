@@ -1,1 +1,1 @@
-spring project-zeta
+spring project-zeta test
